@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "../components/Login";
 
-import React from 'react'
+import React from "react";
 import Home from "../components/Home";
 import SignUp from "../components/SignUp";
 import HomeProtection from "../components/HomeProtection";
-import { UserAuth } from "../contextApi/userAuth";
+import { UserAuth } from "../components/UserAuth";
 function App() {
   return (
     <UserAuth>
       <Routes>
-        <Route path="/" element={<Login/>}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route
           path="/home"
@@ -25,4 +25,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

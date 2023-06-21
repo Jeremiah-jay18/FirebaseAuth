@@ -1,14 +1,12 @@
-import React, { Children } from 'react' 
-import { Navigate } from 'react-router-dom'
-import { UseUserAuth } from '../contextApi/userAuth'
-function HomeProtection({children}) {
-  
-  const {user} = UseUserAuth()
-  if (!user){
-     return <Navigate to="/"/>
+import React, { Children } from "react";
+import { Navigate } from "react-router-dom";
+import { UseUserAuth } from "./UserAuth";
+function HomeProtection({ children }) {
+  const { user } = UseUserAuth();
+  if (!user) {
+    return <Navigate to="/" />;
   }
-  return children
-  
+  return children;
 }
 
-export default HomeProtection
+export default HomeProtection;

@@ -1,27 +1,23 @@
-import React from 'react'
-import { UseUserAuth } from '../contextApi/userAuth'
-import { useNavigate, Link } from 'react-router-dom'
+import React from "react";
+import { UseUserAuth } from "./UserAuth";
+import { useNavigate, Link } from "react-router-dom";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { BsPencilSquare } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
 import { SlCalender } from "react-icons/sl";
 import { RiLogoutBoxLine } from "react-icons/ri";
-import Navbar from './Navbar';
-
-
-
+import Navbar from "./Navbar";
 
 function Home() {
-  const { logout } = UseUserAuth()
-  const navigate = useNavigate()
+  const { logout } = UseUserAuth();
+  const navigate = useNavigate();
   async function signout() {
     try {
-      await logout()
-      navigate('/')
+      await logout();
+      navigate("/");
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message);
     }
-    
   }
 
   return (
@@ -72,4 +68,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

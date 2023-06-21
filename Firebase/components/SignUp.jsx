@@ -1,33 +1,30 @@
-import React, { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { AiOutlineUser } from "react-icons/ai";
-import { UseUserAuth } from '../contextApi/userAuth';
+import { UseUserAuth } from "./UserAuth";
 
 function SignUp() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const { signUp } = UseUserAuth();
-  const navgigate = useNavigate()
+  const navgigate = useNavigate();
 
- async function handleSubmit(e) {
-   e.preventDefault();
-   try {
-     await signUp(email, password);
-     navgigate('/home')
-   } catch (error) {
-    return alert(error.message);
-   }
- }
-
-
-
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      await signUp(email, password);
+      navgigate("/home");
+    } catch (error) {
+      return alert(error.message);
+    }
+  }
 
   return (
     <div className="p-10 mx-auto mt-10 border shadow-md ssm:w-full sm:w-4/5 lg:w-1/3">
@@ -105,5 +102,4 @@ function SignUp() {
   );
 }
 
-
-export default SignUp
+export default SignUp;

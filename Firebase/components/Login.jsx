@@ -1,29 +1,27 @@
-import React,{useState} from 'react'
-import {Link, useNavigate} from 'react-router-dom'
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { UseUserAuth } from '../contextApi/userAuth';
-
+import { UseUserAuth } from "./UserAuth";
 
 function Login() {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const {login} = UseUserAuth()
-  const navigate = useNavigate()
-  
+  const { login } = UseUserAuth();
+  const navigate = useNavigate();
+
   async function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     try {
       await login(email, password);
-      navigate('/home')
+      navigate("/home");
     } catch (error) {
       return alert(error.message);
     }
-    
   }
 
   return (
@@ -55,8 +53,10 @@ function Login() {
               type="password"
             />
           </div>
-          <button onClick={handleSubmit}
-            className="mb-3 cursor-pointer mt-3 w-full bg-blue-600 p-1.5 text-white rounded-md">
+          <button
+            onClick={handleSubmit}
+            className="mb-3 cursor-pointer mt-3 w-full bg-blue-600 p-1.5 text-white rounded-md"
+          >
             Login
           </button>
           <h6 className="mb-1 text-center ">
@@ -103,4 +103,4 @@ function Login() {
   );
 }
 
-export default Login
+export default Login;

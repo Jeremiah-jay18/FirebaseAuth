@@ -20,12 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/homeprotection",
     element:<HomeProtection/>,
-          // children:[{
-          //     path: '/home',
-          //    pelement: <Home />
-            
-          // }
-          // ]
+         
   },
   {
     path: '/home',

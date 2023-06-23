@@ -6,7 +6,6 @@ function Navbar() {
     const date = new Date()
     const day = date.toUTCString()
     
-    console.log(day)
   return (
     <div className="border w-3/5 px-12 py-4">
       {/* Top Nav */}

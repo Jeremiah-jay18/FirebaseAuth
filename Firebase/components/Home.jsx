@@ -50,7 +50,7 @@ function Home() {
           <Link>
             <ul className="flex gap-4  p-2 items-center all ease-in 300ms mb-8">
               <SlCalender size={23} />
-              <li>Sudent Calander</li>
+              <li>Student Calander</li>
             </ul>
           </Link>
           <button

@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
     try {
       await login(email, password);
-      navigate("/home");
+      navigate("/homeprotection");
     } catch (error) {
       return alert(error.message);
     }
@@ -66,11 +66,11 @@ function Login() {
             </span>
           </h6>
           <hr className="bg-black h-0.5 rounded-sm mb-5" />
-          <h6 className="mb-3 text-center">Or Sign In with </h6>
-          <div className="flex justify-between mt-2">
+          <h6 className="mb-3 text-center mb-5">Or Sign In with </h6>
+          <div className="ssm:gap-4 flex justify-between mt-2">
             <span
               role="button"
-              className="flex gap-2 px-3 py-1 font-medium text-white bg-blue-800 rounded-md cursor-pointer hover:bg-blue-600"
+              className=" flex gap-2 px-3 py-1 font-medium text-white bg-blue-800 rounded-md cursor-pointer hover:bg-blue-600"
             >
               <FcGoogle size={23} /> Google
             </span>

@@ -74,7 +74,7 @@ function SignUp() {
             Sign Up
           </button>
           <hr className="bg-black h-0.5 rounded-sm mb-5" />
-          <h6 className="mb-3 text-center">Or Sign Up with </h6>
+          <h6 className="mb-5 text-center">Or Sign Up with </h6>
           <div className="flex justify-between mt-2">
             <span className="flex gap-2 px-3 py-1 font-medium text-white bg-blue-800 rounded-md cursor-pointer hover:bg-blue-600">
               <FcGoogle size={23} /> Google

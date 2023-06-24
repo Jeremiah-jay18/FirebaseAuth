@@ -18,14 +18,14 @@ function Login() {
     e.preventDefault();
     try {
       await login(email, password);
-      navigate("/homeprotection");
+      navigate("/home");
     } catch (error) {
       return alert(error.message);
     }
   }
 
   return (
-    <div className="ssm:w-full sm:w-4/5 lg:w-1/3 p-10 mx-auto mt-10 border shadow-lg">
+    <div className="p-10 mx-auto mt-10 border shadow-lg ssm:w-full sm:w-4/5 lg:w-1/3">
       <div>
         <h1 className="text-lg font-medium text-center">
           Welcome back <span>👋</span>
@@ -66,11 +66,11 @@ function Login() {
             </span>
           </h6>
           <hr className="bg-black h-0.5 rounded-sm mb-5" />
-          <h6 className="mb-3 text-center mb-5">Or Sign In with </h6>
-          <div className="ssm:gap-4 flex justify-between mt-2">
+          <h6 className="mb-3 mb-5 text-center">Or Sign In with </h6>
+          <div className="flex justify-between mt-2 ssm:gap-4">
             <span
               role="button"
-              className=" flex gap-2 px-3 py-1 font-medium text-white bg-blue-800 rounded-md cursor-pointer hover:bg-blue-600"
+              className="flex gap-2 px-3 py-1 font-medium text-white bg-blue-800 rounded-md cursor-pointer  hover:bg-blue-600"
             >
               <FcGoogle size={23} /> Google
             </span>
